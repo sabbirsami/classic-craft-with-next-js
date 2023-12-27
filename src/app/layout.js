@@ -1,3 +1,4 @@
+import Navbar from "@/components/shared/Navbar";
 import "./globals.css";
 
 import { Cormorant } from "next/font/google";
@@ -14,7 +15,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
     return (
         <html lang="en">
-            <body className={cormorant.className}>{children}</body>
+            <body className={cormorant.className}>
+                <Navbar />
+                {children}
+            </body>
         </html>
     );
 }
